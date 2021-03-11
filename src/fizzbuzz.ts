@@ -1,26 +1,10 @@
-
 function fizzBuzz() {
-    for (let i = 1; i <= 100; i++) {
-        let output = "";
-        switch (true) {
-            case isMultiple(i, 15):
-                output = "FizzBuzz";
-                break;
-            case isMultiple(i, 3):
-                output = "Fizz";
-                break;
-            case isMultiple(i, 5):
-                output = "Buzz";
-                break;
-            default:
-                output = i.toString();
-                break;
-        }
-        console.log(output);
-    }
+  for (let n = 1; n <= 100; n++) {
+    let output = ""
+    if(n%3 === 0) output += "Fizz";
+    if(n%5===0) output += "Buzz";
+    console.log(output || n)
+  }
 }
 
-
-function isMultiple(num: number, mod: number) {
-    return num % mod === 0
-}
+fizzBuzz();
